@@ -503,6 +503,7 @@
             </ul>
           </address>
         </div>
+
         <div class="social">
           <b class="title">присоединяйтесь</b>
           <ul class="list">
@@ -556,9 +557,24 @@
             </li>
           </ul>
         </div>
+
+        <div class="subscription">
+          <b class="subscription-title">Подпишитесь на рассылку</b>
+          <form class="js-speaker-form" action="">
+            <label class="subscription-label" for="user-email">E-mail</label>
+            <input type="email" name="email" id="user-email" />
+            <button class="subscription-button" type="submit">
+              Подписаться
+              <svg class="subscription-button-icon" width="24px" height="24px">
+                <use href="./images/icons.svg#send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
 
+    <!-- Модальне вікно -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-close-button" type="button" data-modal-close>
@@ -566,9 +582,39 @@
             <use href="./images/icons.svg#close"></use>
           </svg>
         </button>
+        <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+        <form class="js-speaker-form">
+          <label for="name"> Имя </label>
+          <input type="text" name="name" id="name" />
+
+          <label for="tel"> Телефон </label>
+          <input type="tel" name="tel" id="tel" />
+
+          <label for="email"> Почта </label>
+          <input type="email" name="email" id="email" />
+
+          <label for="comment">Комментарий</label>
+          <textarea name="comment" id="comment" rows="8">
+Введите текст</textarea
+          >
+
+          <input
+            type="checkbox"
+            name="contract"
+            value="contract"
+            id="contract"
+          />
+          <label for="contract"
+            >Соглашаюсь с рассылкой и принимаю
+            <a class="modal-contract-link" href="">Условия договора</a></label
+          >
+
+          <button class="modal-submit-button" type="submit">Отправить</button>
+        </form>
       </div>
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/console.js"></script>
   </body>
 </html>
