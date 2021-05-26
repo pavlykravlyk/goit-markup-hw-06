@@ -560,7 +560,7 @@
 
         <div class="subscription">
           <b class="subscription-title">Подпишитесь на рассылку</b>
-          <form class="js-speaker-form" action="">
+          <form class="subscription-form" action="">
             <label class="subscription-label" for="user-email">E-mail</label>
             <input type="email" name="email" id="user-email" />
             <button class="subscription-button" type="submit">
@@ -582,32 +582,44 @@
             <use href="./images/icons.svg#close"></use>
           </svg>
         </button>
-        <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
-        <form class="js-speaker-form">
-          <label for="name"> Имя </label>
-          <input type="text" name="name" id="name" />
+        <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
+        <form class="modal-form">
+          <ul class="list">
+            <li class="modal-form-field">
+              <label for="name"> Имя </label>
+              <input type="text" name="name" id="name" />
+            </li>
+            <li class="modal-form-field">
+              <label for="tel"> Телефон </label>
+              <input type="tel" name="tel" id="tel" />
+            </li>
+            <li class="modal-form-field">
+              <label for="email"> Почта </label>
+              <input type="email" name="email" id="email" />
+            </li>
+            <li class="modal-form-field comment">
+              <label for="comment">Комментарий</label>
+              <textarea
+                name="comment"
+                id="comment"
+                rows="8"
+                placeholder="Введите текст"
+              ></textarea>
+            </li>
+          </ul>
 
-          <label for="tel"> Телефон </label>
-          <input type="tel" name="tel" id="tel" />
-
-          <label for="email"> Почта </label>
-          <input type="email" name="email" id="email" />
-
-          <label for="comment">Комментарий</label>
-          <textarea name="comment" id="comment" rows="8">
-Введите текст</textarea
-          >
-
-          <input
-            type="checkbox"
-            name="contract"
-            value="contract"
-            id="contract"
-          />
-          <label for="contract"
-            >Соглашаюсь с рассылкой и принимаю
-            <a class="modal-contract-link" href="">Условия договора</a></label
-          >
+          <p class="modal-form-field-contract">
+            <input
+              type="checkbox"
+              name="contract"
+              value="contract"
+              id="contract"
+            />
+            <label for="contract"
+              >Соглашаюсь с рассылкой и принимаю
+              <a class="modal-contract-link" href="">Условия договора</a></label
+            >
+          </p>
 
           <button class="modal-submit-button" type="submit">Отправить</button>
         </form>
@@ -615,6 +627,5 @@
     </div>
 
     <script src="./js/modal.js"></script>
-    <script src="./js/console.js"></script>
   </body>
 </html>
